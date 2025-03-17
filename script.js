@@ -20,7 +20,7 @@ const getRemaining = function(){
         return document.getElementById('expenseDisplay').innerHTML = 'Expense: ' + "$" + expense.value;
     };
 function updateDisplay() {
-    document.getElementById('spend').innerHTML = "The total budget is " + budget + ' and the' + addExpense() + " is" + ' Remaining' + ' ' + getremaining();
+    document.getElementById('spend').innerHTML = "The total budget is " + budget + ' and the' + addExpense() + " is" + ' Remaining' + ' ' + getRemaining();
 }
 // Adding an event listner to the button for it to be active for invoking
 const resultbtn = document.getElementById('myButton');
