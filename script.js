@@ -10,7 +10,7 @@ let expense = document.getElementById('expenseInput');
 
    
 
-const getremaining = function(){
+const getRemaining = function(){
     return document.getElementById('remainingDisplay').innerHTML = "remaining : " + (budget - expense.value);
 }
 
@@ -19,17 +19,19 @@ const getremaining = function(){
  function addExpense() {
         return document.getElementById('expenseDisplay').innerHTML = 'Expense: ' + "$" + expense.value;
     };
-function updatedisplay() {
+function updateDisplay() {
     document.getElementById('spend').innerHTML = "The total budget is " + budget + ' and the' + addExpense() + " is" + ' Remaining' + ' ' + getremaining();
 }
-
+// Adding an event listner to the button for it to be active for invoking
 const resultbtn = document.getElementById('myButton');
 
+
+// Adding all functoins to the event listner for the to be invoke at once
 resultbtn.addEventListener('click', 
     function()
     {
         addExpense();
-        getremaining();
-        updatedisplay();
+        getRemaining();
+        updateDisplay();
     }
 )
